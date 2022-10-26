@@ -27,12 +27,10 @@ public class SimpleArticleService implements ArticleService {
         var words = wordStore.findAll();
         int divCount = 5;
         for (int i = 1; i <= divCount; i++) {
-            List<Article> articles = new ArrayList<>();
             for (int j = 0; j < count / divCount; j++) {
                 LOGGER.info("Сгенерирована статья № {}", j * i);
-                articles.add(articleGenerator.generate(words));
+                articleStore.save(articleGenerator.generate(words));
             }
-            articles.forEach(articleStore::save);
         }
     }
 }
