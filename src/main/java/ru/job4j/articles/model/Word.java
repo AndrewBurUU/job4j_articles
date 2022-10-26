@@ -26,4 +26,5 @@ public class Word {
     public void setValue(String value) {
         this.value = value;
     }
+
 }
