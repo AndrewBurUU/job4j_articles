@@ -25,12 +25,9 @@ public class SimpleArticleService implements ArticleService {
     public void generate(Store<Word> wordStore, int count, Store<Article> articleStore) {
         LOGGER.info("Генерация статей в количестве {}", count);
         var words = wordStore.findAll();
-        int divCount = 5;
-        for (int i = 1; i <= divCount; i++) {
-            for (int j = 0; j < count / divCount; j++) {
-                LOGGER.info("Сгенерирована статья № {}", j * i);
-                articleStore.save(articleGenerator.generate(words));
-            }
+        for (int i = 1; i < count; i++) {
+            LOGGER.info("Сгенерирована статья № {}", i);
+            articleStore.save(articleGenerator.generate(words));
         }
     }
 }
