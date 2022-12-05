@@ -22,3 +22,6 @@ java -jar target/app.jar
 
 1. Перейте к папке ``src/main/java`` и файлу ``ru.job4j.articles.Application``
 2. Нажать на кнопку запуска метода ``main`` в IDE
+
+# Контакты
+Telegram: @andrew76k
