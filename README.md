@@ -24,4 +24,4 @@ java -jar target/app.jar
 2. Нажать на кнопку запуска метода ``main`` в IDE
 
 # Контакты
-Telegram: @andrew76k
+andrew76k@rambler.ru
